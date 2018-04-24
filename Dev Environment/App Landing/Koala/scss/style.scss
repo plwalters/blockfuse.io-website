@@ -1,0 +1,36 @@
+/* ======== index ========
+1. RESET
+2. BODY LAYOUT
+3. COMMON
+4. UI KIT
+  4.1 ACCORDION
+  4.2 BATTON
+  4.3 SECTION TITLE
+  4.4 CARD
+  4.5 TABS
+  4.6 LIST STYLE
+  4.7 MEDIA STYLE
+  4.8 ICON STYLE
+  4.9 IMAGE STYLE
+  4.10 CAROUSEL
+5. HEADER
+6. HOME
+  6.1 BANNER CONTENT
+  6.2 FEATURES STYLE ONE
+  6.3 PRICING TABLE
+  6.4 PROME VIDEO SECTION
+  6.5 CONTACT
+  6.6 TESTIMONIAL
+7. FOOTER
+===================== */
+
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/media-query';
+@import 'reset';
+@import 'body-layout';
+@import 'common';
+@import 'ui-kit';
+@import 'header';
+@import 'home';
+@import 'footer';

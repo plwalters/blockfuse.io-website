@@ -1,0 +1,190 @@
+/* ================================================
+--> 5. HEADER
+================================================== */
+
+/*======== Header Styles ========*/
+.header {
+  position: relative;
+}
+
+/* Fixed navber when scroll up */
+.up-scroll {
+  .navbar-scrollUp.navbar-sticky {
+    transform: translateY(-100%);
+		transition: .3s ease-in-out;
+  }
+}
+nav.navbar {
+  position: relative;
+  transition: .4s ease-in-out;
+  z-index: 1000;
+  &.navbar-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid $border-color;
+    animation-name: fadeInDown;
+    .navbar-brand {
+      .svgLogo {
+        height: 42px;
+      }
+    }
+    .nav-item {
+      a.nav-link {
+        @include tablet {
+          padding: 20px 10px;
+        }
+        @include desktops {
+          padding: 25px 20px;
+        }
+        @include large-desktops {
+          padding: 25px;
+        }
+      }
+      &.btn-primary {
+        @include tablet {
+          margin-top: 9px;
+        }
+        @include desktops {
+          margin-top: 12px;
+        }
+        @include large-desktops {
+          margin-top: 10px;
+        }
+      }
+      &.dropdown.mega_dropdown {
+        .dropdown-menu {
+          top: 90px !important;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    border: 1px solid $primary-color;
+    padding: 8px 10px;
+    color: $primary-color;
+    &:focus{
+      outline: none;
+    }
+  }
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  > .container {
+    position: relative;
+  }
+}
+
+.navbar-nav.site_nav {
+  .nav-item {
+    a.nav-link {
+      display: block;
+      font-weight: 700;
+      padding: 10px 15px;
+      font-size: 12px;
+      color: $title-color ;
+      text-transform: uppercase;
+      @include tablet {
+        padding: 30px 10px;
+        font-size: 10px;
+      }
+      @include desktops {
+        padding: 30px 20px;
+        font-size: 12px;
+      }
+      @include large-desktops {
+        padding: 40px 25px;
+      }
+      &.active {
+        color: $primary-color;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    &.active {
+      a.nav-link {
+        color: $primary-color;
+      }
+    }
+
+    /* btn primary */
+    &.btn-primary {
+      width: 140px;
+      height: 50px;
+      line-height: 50px;
+      padding: 0;
+      margin-top: 24px;
+      @include tablet {
+        margin-top: 20px;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+      }
+      @include desktops {
+        width: 135px;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 15px;
+        margin-top: 17px;
+        margin-left: 5px;
+      }
+      @include large-desktops {
+        margin-top: 25px;
+        padding: 0 15px;
+        width: 140px;
+        height: 50px;
+        line-height: 50px;
+      }
+      .nav-link {
+        color: $white-color;
+        padding: 0px;
+        font-size: 12px;
+        font-weight: 600;
+        @include tablet {
+          font-size: 10px;
+        }
+        @include desktops {
+          font-size: 12px;
+        }
+        &:hover {
+          color: $white-color;
+
+        }
+      }
+    }
+  }
+}
+
+.static {
+  .navbar-sticky {
+    display: none;
+  }
+}
+
+/* Make header width same with as body when position is set to fixed */
+body.boxed .is-visible,
+body.boxed .navbar-sticky {
+  @include desktops {
+    max-width: 970px;
+  }
+  @include large-desktops {
+    max-width: 1260px;
+  }
+}
+
+/* Header logo */
+.svgLogo {
+  .cls-1 {
+    fill: #383c42;
+  }
+
+  .cls-1, .cls-2 {
+    fill-rule: evenodd;
+  }
+
+  .cls-2 {
+    fill: $primary-color;
+  }
+}

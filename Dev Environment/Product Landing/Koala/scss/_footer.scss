@@ -1,0 +1,124 @@
+/* ================================================
+--> 7. FOOTER
+================================================== */
+/* ======== 7.1 FOOTER TOP ========*/
+.footer-top {
+  padding: 40px 0;
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include desktops {
+    padding: 80px 0;
+  }
+}
+/*  Footer Logo */
+.svgLogo2 {
+  .cls-1 {
+    fill: #fff;
+  }
+
+  .cls-1, .cls-2 {
+    fill-rule: evenodd;
+  }
+
+  .cls-2 {
+    fill: $primary-color;
+  }
+}
+
+/* Footer Form */
+.footer-form {
+  margin-bottom: 50px;
+  @include desktops {
+    margin-bottom: 0;
+  }
+	label {
+		text-transform: uppercase;
+		font-size: 16px;
+		color: $white-color;
+		font-family: 'Poppins', sans-serif;
+	}
+	.form-control {
+		position: relative;
+		background-color: rgb(25, 28, 32) !important;
+		border: 1px solid rgb(39, 43, 48) !important;
+		border-radius: 2px;
+	  height: 54px;
+		color: $white-color;
+	}
+	.btn-submit {
+		position: absolute;
+    top: 81px;
+	  right: 18px;
+	  width: 67px;
+	  height: 50px;
+	  border-radius: 2px;
+		@include tablet {
+			top: 30px;
+  	  right: 17px;
+		}
+		i{
+			font-size: 16px;
+		}
+	}
+}
+
+/* Footer Social Links */
+.footer-social-link {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktops {
+    margin-bottom: 0;
+  }
+}
+
+/* ======== 7.2 FOOTER COPY RIGHT ======== */
+.footer-copyright {
+  border: 1px solid rgb(38, 42, 48);
+  p {
+    color: #7c7f83;
+    text-align: center;
+    font-size: 11px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    a{
+      font-family: "Montserrat";
+      color: #797E86;
+      @include desktops {
+        text-align: left;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .footer-terms {
+    text-align: center;
+    @include desktops {
+      text-align: right;
+    }
+    a {
+      font-size: 11px;
+      color: #797E86;
+      display: inline-block;
+      padding: 0 10px;
+      font-family: "Montserrat";
+      text-transform: uppercase;
+      &:first-child{
+        position: relative;
+  			&::after {
+          position: absolute;
+          background-color: #797E86;
+          width: 1px;
+          height: 10px;
+          content: '';
+          right: -2px;
+          top: 6px;
+  			}
+  		}
+    }
+  }
+}

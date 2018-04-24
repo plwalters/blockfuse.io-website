@@ -1,0 +1,224 @@
+/* ================================================
+--> 6. HOME
+================================================== */
+/*======== 6.1 BANNER CONTENT ========*/
+/* Banner Text content */
+.banner-text-content {
+	margin-top: 170px;
+	width: 100%;
+  @include tablet {
+		margin-top: 0;
+		display: table-cell;
+		width: 45%;
+		vertical-align: middle;
+  }
+  h5{
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-color2;
+    line-height: 20px;
+
+    @include tablet {
+      font-size: 16px;
+      letter-spacing: 10px;
+      margin-bottom: 5px;
+    }
+		@include desktops {
+			font-size: 18px;
+		}
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-transform: uppercase;
+		@include tablet {
+      font-size: 40px;
+      line-height: 40px;
+			font-weight: 700;
+      margin-bottom: 15px;
+    }
+    @include desktops {
+      font-size: 55px;
+      line-height: 55px;
+    }
+		@include large-desktops {
+      font-size: 70px;
+			line-height: 70px;
+    }
+
+  }
+  p {
+		display: none;
+    @include tablet {
+			display: block;
+      font-size: 16px;
+			line-height: 25px;
+			font-size: 14px;
+			color: #7d7f82;
+    }
+  }
+	.btn-primary {
+		margin-top: 30px;
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+		@include tablet {
+			margin-top: 50px;
+		}
+	}
+}
+/* Banner Image */
+.banner-image {
+	margin-top: 50px;
+	width: 100%;
+	display: table-footer-group;
+	@include tablet {
+		margin-top: 0;
+		display: table-cell;
+		width: 45%;
+		vertical-align: middle;
+	}
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/*======== 6.2 PROME VIDEO SECTION ========*/
+.home-promo-video {
+	.promo-video {
+		margin-top: 40px;
+		position: relative;
+		img {
+			border: 8px solid $white-color;
+
+		}
+		@include tablet {
+			margin-top: 0;
+		}
+	}
+	a.video-link {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		text-align: center;
+		border: 5px solid rgba($primary-color, .5);
+		@include transition(transform 0.3s ease);
+		span {
+			display: block;
+			width: 65px;
+			height: 65px;
+
+			background-color: $primary-color;
+			border-radius: 50%;
+		}
+		i {
+			line-height: 65px;
+			position: relative;
+			font-size: 20px;
+			display: inline-block;
+			color: $white-color;
+			padding-left: 5px;
+		}
+	}
+}
+
+
+/*======== 6.3 TESTIMONIAL ========*/
+.testimonial-section {
+	padding-top: 70px;
+	padding-bottom: 180px;
+	@include tablet {
+		padding-top: 100px;
+	}
+}
+.testimonial-carouel{
+  position: relative;
+  z-index: 1;
+  .slick-slider {
+		@include tablet {
+			padding: 0 50px;
+		}
+		@include desktops {
+			padding: 0 100px;
+		}
+	}
+  .contents {
+    font-size: 16px;
+    color: $white-color;
+    line-height: 16px;
+    span {
+      color: #acb7b4;
+      font-size: 14px;
+			text-transform: capitalize;
+    }
+  }
+}
+
+/*======== 6.4 PRODUCT INDICATING SECTION ========*/
+.feature-indicate {
+	@include desktops {
+		padding-bottom: 200px;
+	}
+	@include large-desktops {
+		padding-bottom: 250px;
+	}
+	.content {
+		.media {
+			margin-top: 30px;
+			@include tablet {
+				margin-top: 50px;
+			}
+			@include desktops {
+				margin-top: 140px;
+			}
+			.icon-style-3{
+				margin-right: 20px;
+				&.custom-ml {
+					@include tablet {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.content2 {
+		.media {
+			margin-top: 30px;
+			@include tablet {
+				margin-top: 50px;
+			}
+			@include desktops {
+				margin-top: 65px;
+			}
+			@include large-desktops {
+				margin-top: 90px;
+			}
+			.icon-style-3{
+				margin-right: 20px;
+				&.custom-ml {
+					@include tablet {
+						margin-right: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}
+.indicate-images {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 65px;
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

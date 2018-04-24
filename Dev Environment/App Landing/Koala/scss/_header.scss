@@ -1,0 +1,206 @@
+// /* ================================================
+// --> 5. HEADER
+// ================================================== */
+.header {
+  position: relative;
+}
+/* Fixed navber when scroll up */
+.up-scroll {
+  .navbar-scrollUp.navbar-sticky {
+    transform: translateY(-100%);
+		transition: .3s ease-in-out;
+  }
+}
+
+nav.navbar {
+  transition: .4s ease-in-out;
+  z-index: 1000;
+  &.navbar-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-name: fadeInDown;
+    @include linear-gradient(135deg, rgba($primary-color,1) 45%,rgba($secondary-color,1) 70%);
+    .navbar-brand {
+      .svgLogo {
+        height: 42px;
+      }
+    }
+    .nav-item {
+      a.nav-link {
+        padding-left: 20px;
+        @include tablet {
+          padding: 20px 10px;
+          &.active {
+            &::after {
+              bottom: 20px;
+            }
+          }
+        }
+        @include desktops {
+          padding: 25px 20px;
+        }
+        @include large-desktops {
+          padding: 25px;
+        }
+      }
+    &:last-child {
+      a.nav-link {
+        margin-top: 10px;
+        @include desktops {
+          margin-top: 8px;
+        }
+        @include large-desktops {
+          margin-top: 12px;
+        }
+      }
+    }
+    }
+  }
+  .navbar-toggler {
+    border: 1px solid $white-color;
+    padding: 0px;
+    color: $white-color;
+    i{
+      font-size: 40px;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  > .container {
+    position: relative;
+  }
+
+}
+.navbar {
+  .container {
+    .collapse,
+    .collapsing{
+      margin-left: -15px;
+      margin-right: -15px;
+      background-color: $primary-color;
+      padding-bottom: 15px;
+      @include tablet {
+        background-image: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.navbar-nav.site_nav {
+  .nav-item {
+    a.nav-link {
+      display: block;
+      font-weight: 400;
+      padding: 10px 15px;
+      font-size: 12px;
+      color: $white-color;
+      text-transform: uppercase;
+      position: relative;
+      @include tablet {
+        padding: 30px 10px;
+        font-size: 10px;
+      }
+      @include desktops {
+        padding: 30px 20px;
+        font-size: 14px;
+      }
+      @include large-desktops {
+        padding: 44px 25px;
+      }
+      &.active {
+        @include tablet {
+          &::after {
+            position: absolute;
+            width: 65%;
+            bottom: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            background-color: $white-color;
+            height: 2px;
+          }
+        }
+      }
+    }
+    &:last-child{
+      a.nav-link {
+        border: 1px solid $white-color;
+        padding: 0px 25px;
+        margin-top: 15px;
+        border-radius: 2px;
+        margin-left: 15px;
+        height: 45px;
+        line-height: 45px;
+        display: inline-block;
+        position: relative;
+        &:hover {
+          border: 1px solid transparent;
+          box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.1);
+          background-color: $white-color;
+          color: $primary-color;
+        }
+        @include tablet {
+          height: 35px;
+          line-height: 35px;
+          margin-top: 20px;
+          margin-left: 15px;
+          padding: 0 17px;
+        }
+        @include desktops {
+          margin-top: 15px;
+          height: 45px;
+          line-height: 45px;
+          margin-right: 15px;
+        }
+        @include large-desktops {
+          margin-top: 30px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+}
+
+/*Navbar Transparent*/
+.navbar-transparent {
+  position: absolute;
+  width: 100%;
+  background-image: none;
+}
+/* Fixed navber when scroll up */
+.static {
+  .navbar-sticky {
+    display: none;
+  }
+}
+
+/* Make header width same with as body when position is set to fixed */
+body.boxed .navbar-sticky {
+    @include desktops {
+        max-width: 970px;
+    }
+    @include large-desktops {
+        max-width: 1260px;
+    }
+}
+
+/* Header logo Svg*/
+.svgLogo {
+  .cls-1 {
+    fill: $white-color;
+  }
+
+  .cls-1, .cls-2 {
+    fill-rule: evenodd;
+  }
+
+  .cls-2 {
+    fill: $white-color;
+  }
+}

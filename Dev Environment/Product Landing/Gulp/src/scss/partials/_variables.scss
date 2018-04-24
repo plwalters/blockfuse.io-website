@@ -1,0 +1,32 @@
+$primary-color: #31d19e;
+$secondary-color:#eaeaea;
+$white-color: #ffffff;
+$black-color: #000000;
+$black-color2: #171A1F;
+$black-russion: #1D2025;
+$sand: #f5f5f5;
+$text-color:#929292;
+$text-color2:#d2d0d0;
+$text-color2:#666666;
+$title-color: #1d2025;
+$border-color: #EBEBEB;
+$navy : #0a233b;
+$white-smoke : #F8F8F8;
+$deep-gray: #333333;
+
+$success: #49c32c;
+$bg-success: #49c32c;
+$info: #439fdb;
+$bg-info: #439fdb;
+$warning: #eabf38;
+$bg-warning: #eabf38;
+$danger: #f55c5d;
+$bg-danger: #f55c5d;
+$inverse: #323f41;
+
+@function tint($primary-color, $percentage) {
+  @return mix($primary-color, transparent, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
