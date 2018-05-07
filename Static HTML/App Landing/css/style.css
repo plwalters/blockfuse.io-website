@@ -2220,3 +2220,12 @@ nav.navbar > .container {
   display: block;
   text-align: center;
 }
+
+.small-round-image {
+  max-height: 70px;
+  border-radius: 50%;
+}
+
+.wow > .media-body {
+  width: 100%;
+}
