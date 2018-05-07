@@ -2148,7 +2148,7 @@ nav.navbar > .container {
 }
 
 .contact .media .media-body {
-  margin-left: 15px;
+  text-align: center;
 }
 
 .social-link {
@@ -2228,4 +2228,8 @@ nav.navbar > .container {
 
 .wow > .media-body {
   width: 100%;
+}
+
+#features p {
+  font-size: 18px;
 }
